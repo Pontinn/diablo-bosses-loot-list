@@ -1,6 +1,6 @@
 package dev.pontin.DiabloBossLootList.Uniques;
 
-public enum UniqueRarity {
+public enum ItemRarity {
     UNIQUE,
     MYTHIC;
 }
