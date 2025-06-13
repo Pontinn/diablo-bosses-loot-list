@@ -32,45 +32,56 @@ Abaixo está o formato esperado para que os dados sejam lidos corretamente duran
 ]
 
 ```
-## 🧩 Campos obrigatórios
-Campo	Tipo	Descrição
-name	string	Nome do item único
-imgUrl	string	URL da imagem
-itemType	string	Tipo do item (ver lista abaixo)
-itemRarity	string	Raridade do item (ver lista abaixo)
-itemPropriety1	string	Propriedade especial 1
-itemPropriety2	string	Propriedade especial 2
-itemAffix1-4	string	Atributos secundários (affixes)
-itemAspect	string	Aspecto especial do item
-bosses	array de strings	Lista com os nomes dos bosses que podem dropá-lo
-classNames	array de strings	Lista de classes que podem usar o item (ex: "Druid", "Rogue")
 
 ## 🧠 Opções válidas para itemType
 Você deve usar exatamente uma das strings abaixo para o campo itemType:
 
-"HELM"
+"HELM" 
+
 "CHEST ARMOR"
+
 "GLOVES"
+
 "PANTS"
+
 "BOOTS"
+
 "AMULET"
+
 "RING"
+
 "STAFF"
+
 "QUARTERSTAFF"
+
 "WAND"
+
 "FOCUS"
+
 "ONE HANDED SWORD"
+
 "TWO HANDED SWORD"
+
 "DAGGER"
+
 "ONE HANDED MACE"
+
 "TWO HANDED MACE"
+
 "GLAIVE"
+
 "BOW"
+
 "ONE HANDED SCYTHE"
+
 "TWO HANDED SCYTHE"
+
 "TOTEM"
+
 "ONE HANDED AXE"
+
 "TWO HANDED AXE"
+
 "SHIELD"
 
 
