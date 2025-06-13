@@ -32,7 +32,7 @@ Abaixo está o formato esperado para que os dados sejam lidos corretamente duran
 ]
 
 ```
-🧩 Campos obrigatórios
+## 🧩 Campos obrigatórios
 Campo	Tipo	Descrição
 name	string	Nome do item único
 imgUrl	string	URL da imagem
@@ -45,70 +45,46 @@ itemAspect	string	Aspecto especial do item
 bosses	array de strings	Lista com os nomes dos bosses que podem dropá-lo
 classNames	array de strings	Lista de classes que podem usar o item (ex: "Druid", "Rogue")
 
-🧠 Opções válidas para itemType
+## 🧠 Opções válidas para itemType
 Você deve usar exatamente uma das strings abaixo para o campo itemType:
 
-"Helm"
+"HELM"
+"CHEST ARMOR"
+"GLOVES"
+"PANTS"
+"BOOTS"
+"AMULET"
+"RING"
+"STAFF"
+"QUARTERSTAFF"
+"WAND"
+"FOCUS"
+"ONE HANDED SWORD"
+"TWO HANDED SWORD"
+"DAGGER"
+"ONE HANDED MACE"
+"TWO HANDED MACE"
+"GLAIVE"
+"BOW"
+"ONE HANDED SCYTHE"
+"TWO HANDED SCYTHE"
+"TOTEM"
+"ONE HANDED AXE"
+"TWO HANDED AXE"
+"SHIELD"
 
-"Chest Armor"
 
-"Gloves"
-
-"Pants"
-
-"Boots"
-
-"Amulet"
-
-"Ring"
-
-"Staff"
-
-"Quarterstaff"
-
-"Wand"
-
-"Focus"
-
-"One Handed Sword"
-
-"Two Handed Sword"
-
-"Dagger"
-
-"One Handed Mace"
-
-"Two Handed Mace"
-
-"Glaive"
-
-"Bow"
-
-"One Handed Scythe"
-
-"Two Handed Scythe"
-
-"Totem"
-
-"One Handed Axe"
-
-"Two Handed Axe"
-
-"Shield"
-
-🧠 Opções válidas para itemRarity
+## 🧠 Opções válidas para itemRarity
 Você deve usar uma das seguintes strings para o campo itemRarity:
 
 "UNIQUE"
 
 "MYTHIC"
 
-⚠️ Ambos os campos são case-insensitive, mas é boa prática manter o padrão correto (tudo maiúsculo, como definido nos enums).
+## ⚠️ Ambos os campos são case-insensitive, mas é boa prática manter o padrão correto (tudo maiúsculo, como definido nos enums).
 
-✅ Exemplo com múltiplos itens
-json
-Copiar
-Editar
+## ✅ Exemplo com múltiplos itens
+```json
 [
   {
     "name": "Ring of Starless Sky",
@@ -141,11 +117,8 @@ Editar
     "classNames": ["Rogue"]
   }
 ]
-📌 Onde colocar o JSON?
+```
+## 📌 Onde colocar o JSON?
 O arquivo deve ser salvo no seguinte caminho no projeto:
-
-css
-Copiar
-Editar
 src/main/resources/data/uniques.json
 Esse arquivo será lido automaticamente durante o processo de seed da aplicação via CommandLineRunner.
