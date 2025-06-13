@@ -30,6 +30,8 @@ Abaixo está o formato esperado para que os dados sejam lidos corretamente duran
     ]
   }
 ]
+
+```
 🧩 Campos obrigatórios
 Campo	Tipo	Descrição
 name	string	Nome do item único
