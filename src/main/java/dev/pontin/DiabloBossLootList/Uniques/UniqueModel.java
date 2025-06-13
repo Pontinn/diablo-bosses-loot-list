@@ -1,9 +1,14 @@
 package dev.pontin.DiabloBossLootList.Uniques;
 
+import dev.pontin.DiabloBossLootList.Bosses.BossModel;
+import dev.pontin.DiabloBossLootList.Classes.ClassModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -49,6 +54,23 @@ public class UniqueModel {
 
     @Column(name = "aspect")
     private String itemAspect;
+
+    @ManyToMany
+    @JoinTable(
+            name = "unique_class",
+            joinColumns = @JoinColumn(name = "unique_id"),
+            inverseJoinColumns = @JoinColumn(name = "class_id")
+
+    )
+    private Set<ClassModel> classes = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "unique_boss",
+            joinColumns = @JoinColumn(name = "unique_id"),
+            inverseJoinColumns = @JoinColumn(name = "boss_id")
+    )
+    private Set<BossModel> bosses = new HashSet<>();
 
     @Transient
     public String getItemType() {

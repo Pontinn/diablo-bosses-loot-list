@@ -1,9 +1,13 @@
 package dev.pontin.DiabloBossLootList.Classes;
 
+import dev.pontin.DiabloBossLootList.Uniques.UniqueModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,9 +23,12 @@ public class ClassModel {
 
     @Column(name = "class_name")
     private ClassNames classNames;
-    
+
     @Column(name = "img_url")
     private String imgUrl;
+
+    @ManyToMany(mappedBy = "classes")
+    private Set<UniqueModel> uniqueItems = new HashSet<>();
 
     @Transient
     public String getClassNames() {

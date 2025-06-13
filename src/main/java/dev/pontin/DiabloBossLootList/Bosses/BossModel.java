@@ -1,9 +1,13 @@
 package dev.pontin.DiabloBossLootList.Bosses;
 
+import dev.pontin.DiabloBossLootList.Uniques.UniqueModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,6 +33,9 @@ public class BossModel {
 
     @Enumerated(EnumType.STRING)
     private BossesMaterials bossMaterial;
+
+    @ManyToMany(mappedBy = "bosses")
+    private Set<UniqueModel> uniqueItems = new HashSet<>();
 
     @Transient
     public String getMaterialName() {
