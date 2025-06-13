@@ -1,4 +1,6 @@
 package dev.pontin.DiabloBossLootList.Bosses;
 
-public class BossRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BossRepository extends JpaRepository<BossModel, Long> {
 }
