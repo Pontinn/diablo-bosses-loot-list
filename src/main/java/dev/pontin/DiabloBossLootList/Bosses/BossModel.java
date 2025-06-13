@@ -4,6 +4,7 @@ import dev.pontin.DiabloBossLootList.Uniques.UniqueModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
@@ -13,6 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Data
 
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "tb_bosses")
 public class BossModel {
@@ -20,6 +22,7 @@ public class BossModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
+    @EqualsAndHashCode.Include
     private Long id;
 
     @Column(name = "name", unique = true)
