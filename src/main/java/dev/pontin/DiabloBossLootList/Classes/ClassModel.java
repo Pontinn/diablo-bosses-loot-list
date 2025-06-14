@@ -22,6 +22,7 @@ public class ClassModel {
     private Long id;
 
     @Column(name = "class_name")
+    @Enumerated(EnumType.STRING)
     private ClassNames classNames;
 
     @Column(name = "img_url")

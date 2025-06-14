@@ -29,9 +29,11 @@ public class UniqueModel {
     private String imgUrl;
 
     @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private ItemType itemType;
 
     @Column(name = "rarity")
+    @Enumerated(EnumType.STRING)
     private ItemRarity itemRarity;
 
     @Column(name = "propriety_1")
